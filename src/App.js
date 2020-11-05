@@ -14,7 +14,8 @@ function App() {
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
-		setCart([...cart, item]);
+		const uniqueItem = {...item, id: item.id * Math.random()}
+		setCart([...cart, uniqueItem]);
 	};
 
 	const removeItem = id => {
